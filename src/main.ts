@@ -48,7 +48,7 @@ app.ticker.add(() => {
   const timeNow = new Date();
   thinLine.rotation = Math.PI * 1.5 + Math.PI / 30 * timeNow.getSeconds();
   longLine.rotation = Math.PI * 1.5 + Math.PI / 30 * timeNow.getMinutes();
-  shortLine.rotation = Math.PI * 1.5 + Math.PI / 30 * ((timeNow.getHours()) * (timeNow.getMinutes()));
+  shortLine.rotation = longLine.rotation / 10;
 })
 
 document.body.appendChild(app.view);
